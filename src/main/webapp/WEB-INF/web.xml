@@ -5,13 +5,21 @@
          version="4.0">
     
 <servlet>
-    <servlet-name>add</servlet-name>
+    <servlet-name>add-servlet</servlet-name>
     <servlet-class>com.fclass.servletjsp.AddServlet</servlet-class>
 </servlet>
 <servlet-mapping>
-    <servlet-name>add</servlet-name>
+    <servlet-name>add-servlet</servlet-name>
     <url-pattern>/add</url-pattern>
-</servlet-mapping>    
-    
-    
+</servlet-mapping>
+
+
+<servlet>
+    <servlet-name>square-servlet</servlet-name>
+    <servlet-class>com.fclass.servletjsp.SqServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>square-servlet</servlet-name>
+    <url-pattern>/square</url-pattern>
+</servlet-mapping>
 </web-app>
