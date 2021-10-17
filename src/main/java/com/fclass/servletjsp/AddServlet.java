@@ -16,9 +16,11 @@ public class AddServlet extends HttpServlet {
         int num2 = Integer.parseInt(req.getParameter("num2"));
         int result = num1+ num2;
 
-        req.setAttribute("result-attribute", result);
-        RequestDispatcher rd = req.getRequestDispatcher("square");//param : url of the servlet it's calling
-        rd.forward(req, res);
+        res.sendRedirect("square?num="+result);
+        //Forward request to a different servlet
+//        req.setAttribute("result-attribute", result);
+//        RequestDispatcher rd = req.getRequestDispatcher("square");//param : url of the servlet it's calling
+//        rd.forward(req, res);
 
     }
 
