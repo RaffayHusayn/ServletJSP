@@ -2,13 +2,11 @@ package com.fclass.servletjsp;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.HttpCookie;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
+import jakarta.servlet.http.*;
 
 public class AddServlet extends HttpServlet {
 
@@ -17,8 +15,12 @@ public class AddServlet extends HttpServlet {
         int num2 = Integer.parseInt(req.getParameter("num2"));
         int result = num1+ num2;
 
-        HttpSession session = req.getSession();
-        session.setAttribute("result-param", result) ;
+       //Cookies with a redirect
+        Cookie cookie = new Cookie("result-cookie", result+"");//adding +"" after int makes it a string
+        res.addCookie(cookie);
+       //Sessions with a redirect
+//        HttpSession session = req.getSession();
+//        session.setAttribute("result-param", result) ;
 
 //        Send response back with this Url
         res.sendRedirect("square");
