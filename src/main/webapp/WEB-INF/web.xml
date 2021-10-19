@@ -15,6 +15,15 @@
 
 
 <servlet>
+    <servlet-name>auth-servlet</servlet-name>
+    <servlet-class>com.fclass.servletjsp.AuthServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>auth-servlet</servlet-name>
+    <url-pattern>/auth</url-pattern>
+</servlet-mapping>
+
+<servlet>
     <servlet-name>square-servlet</servlet-name>
     <servlet-class>com.fclass.servletjsp.SqServlet</servlet-class>
 </servlet>

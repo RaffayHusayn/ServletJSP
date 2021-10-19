@@ -10,9 +10,11 @@ import jakarta.servlet.http.*;
 
 public class AddServlet extends HttpServlet {
 
-    public void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
-        int num1 = Integer.parseInt(req.getParameter("num1"));
-        int num2 = Integer.parseInt(req.getParameter("num2"));
+    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
+        HttpSession session = req.getSession();
+
+        int num1 = (int)session.getAttribute("num1");
+        int num2 = (int)session.getAttribute("num2");
         int result = num1+ num2;
 
        //Cookies with a redirect
