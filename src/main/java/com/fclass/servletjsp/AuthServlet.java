@@ -30,7 +30,7 @@ public class AuthServlet extends HttpServlet {
             RequestDispatcher rd = req.getRequestDispatcher("add");
             req.setAttribute("num1" , num1);
             req.setAttribute("num2", num2);
-            rd.include(req, res);
+            rd.forward(req, res);
             res.setContentType("text/html");
 
             out.println("<b>auth servlet</b>");

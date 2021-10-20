@@ -24,7 +24,7 @@ public class AddServlet extends HttpServlet {
 
         req.setAttribute("result" , result);
         RequestDispatcher rd = req.getRequestDispatcher("square");
-        rd.include(req, res);
+        rd.forward(req, res);
 
 
        //Cookies with a redirect
