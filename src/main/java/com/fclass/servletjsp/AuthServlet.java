@@ -1,5 +1,7 @@
 package com.fclass.servletjsp;
 
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -10,7 +12,7 @@ import java.io.PrintWriter;
 
 public class AuthServlet extends HttpServlet {
 
-    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException{
+    public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
        String inputUsername = req.getParameter("username");
        String inputPassword = req.getParameter("password");
@@ -19,13 +21,19 @@ public class AuthServlet extends HttpServlet {
        String username = "raffayhusayn";
        String password = "1234";
        PrintWriter out = res.getWriter();
-       out.println(inputUsername + "has the password"+ inputPassword );
 
        if(inputUsername.equals(username) && inputPassword.equals(password)){
            HttpSession session = req.getSession();
            session.setAttribute("num1" , num1);
            session.setAttribute("num2", num2);
-           res.sendRedirect("add");
+//           res.sendRedirect("add");
+            RequestDispatcher rd = req.getRequestDispatcher("add");
+            req.setAttribute("num1" , num1);
+            req.setAttribute("num2", num2);
+            rd.include(req, res);
+            res.setContentType("text/html");
+
+            out.println("<b>auth servlet</b>");
 
         }else{
            out.println("incorrect username or password, try again");
