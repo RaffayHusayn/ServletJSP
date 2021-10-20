@@ -3,32 +3,32 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
-    
-<servlet>
-    <servlet-name>add-servlet</servlet-name>
-    <servlet-class>com.fclass.servletjsp.AddServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>add-servlet</servlet-name>
-    <url-pattern>/add</url-pattern>
-</servlet-mapping>
+<!--    -->
+<!--<servlet>-->
+<!--    <servlet-name>add-servlet</servlet-name>-->
+<!--    <servlet-class>com.fclass.servletjsp.AddServlet</servlet-class>-->
+<!--</servlet>-->
+<!--<servlet-mapping>-->
+<!--    <servlet-name>add-servlet</servlet-name>-->
+<!--    <url-pattern>/add</url-pattern>-->
+<!--</servlet-mapping>-->
 
 
-<servlet>
-    <servlet-name>auth-servlet</servlet-name>
-    <servlet-class>com.fclass.servletjsp.AuthServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>auth-servlet</servlet-name>
-    <url-pattern>/auth</url-pattern>
-</servlet-mapping>
+<!--<servlet>-->
+<!--    <servlet-name>auth-servlet</servlet-name>-->
+<!--    <servlet-class>com.fclass.servletjsp.AuthServlet</servlet-class>-->
+<!--</servlet>-->
+<!--<servlet-mapping>-->
+<!--    <servlet-name>auth-servlet</servlet-name>-->
+<!--    <url-pattern>/auth</url-pattern>-->
+<!--</servlet-mapping>-->
 
-<servlet>
-    <servlet-name>square-servlet</servlet-name>
-    <servlet-class>com.fclass.servletjsp.SqServlet</servlet-class>
-</servlet>
-<servlet-mapping>
-    <servlet-name>square-servlet</servlet-name>
-    <url-pattern>/square</url-pattern>
-</servlet-mapping>
+<!--<servlet>-->
+<!--    <servlet-name>square-servlet</servlet-name>-->
+<!--    <servlet-class>com.fclass.servletjsp.SqServlet</servlet-class>-->
+<!--</servlet>-->
+<!--<servlet-mapping>-->
+<!--    <servlet-name>square-servlet</servlet-name>-->
+<!--    <url-pattern>/square</url-pattern>-->
+<!--</servlet-mapping>-->
 </web-app>

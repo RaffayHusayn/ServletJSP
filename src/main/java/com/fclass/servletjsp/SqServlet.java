@@ -1,11 +1,12 @@
 package com.fclass.servletjsp;
 
 import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
+@WebServlet("/square")
 public class SqServlet extends HttpServlet {
     public void service(HttpServletRequest req, HttpServletResponse res) throws IOException{
 
