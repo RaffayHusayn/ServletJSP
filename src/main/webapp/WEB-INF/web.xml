@@ -31,4 +31,13 @@
 <!--    <servlet-name>square-servlet</servlet-name>-->
 <!--    <url-pattern>/square</url-pattern>-->
 <!--</servlet-mapping>-->
+
+<servlet>
+    <servlet-name>add-jsp</servlet-name>
+    <jsp-file>/Add.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>add-jsp</servlet-name>
+    <url-pattern>/addjsp</url-pattern>
+</servlet-mapping>
 </web-app>

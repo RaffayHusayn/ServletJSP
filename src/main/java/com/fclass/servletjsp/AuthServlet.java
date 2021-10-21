@@ -28,10 +28,10 @@ public class AuthServlet extends HttpServlet {
            session.setAttribute("num1" , num1);
            session.setAttribute("num2", num2);
 //           res.sendRedirect("add");
-            RequestDispatcher rd = req.getRequestDispatcher("add");
+            RequestDispatcher rd = req.getRequestDispatcher("/Add.jsp");
             req.setAttribute("num1" , num1);
             req.setAttribute("num2", num2);
-            rd.forward(req, res);
+            rd.include(req, res);
             res.setContentType("text/html");
 
             out.println("<b>auth servlet</b>");
