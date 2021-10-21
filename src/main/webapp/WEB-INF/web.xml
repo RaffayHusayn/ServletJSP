@@ -40,4 +40,10 @@
     <servlet-name>add-jsp</servlet-name>
     <url-pattern>/addjsp</url-pattern>
 </servlet-mapping>
+
+
+<context-param>
+    <param-name>name</param-name>
+    <param-value>raffayay</param-value>
+</context-param>
 </web-app>

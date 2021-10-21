@@ -1,6 +1,7 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="jakarta.servlet.RequestDispatcher" %>
-<%@ page import="static java.lang.System.out"%>;
+<%@ page import="static java.lang.System.out"%>
+<%@ page import="java.util.Scanner" %>
 <%--
   Created by IntelliJ IDEA.
   User: raffay
@@ -13,18 +14,23 @@
 <head>
     <title>Add Jsp</title>
 </head>
-<body bgcolor="#faebd7">
+<body bgcolor="#778899">
+
+    <%!
+        String outsideClass = "outside Class";
+    %>
 
     <%
+        out.println(application.getInitParameter("name"));
         int num1 =Integer.parseInt( request.getParameter("num1"));
         int num2 = Integer.parseInt(request.getParameter("num2"));
         int result = num1+ num2;
-        out.println("result is : "+ result);
-//        request.setAttribute("result" , result);
-//        RequestDispatcher rd = request.getRequestDispatcher("square");
-//        rd.forward(request, response);
+        request.setAttribute("result" , result);
+        RequestDispatcher rd = request.getRequestDispatcher("square");
+        rd.include(request, response);
 
 
     %>
+    <%="<b>the sum is : " + result + "</b>"%>
 </body>
 </html>
