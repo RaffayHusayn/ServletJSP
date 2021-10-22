@@ -2,6 +2,8 @@
 <%@ page import="jakarta.servlet.RequestDispatcher" %>
 <%@ page import="static java.lang.System.out"%>
 <%@ page import="java.util.Scanner" %>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.Enumeration" %>
 <%--
   Created by IntelliJ IDEA.
   User: raffay
@@ -21,7 +23,12 @@
     %>
 
     <%
-        out.println(application.getInitParameter("name"));
+       Enumeration<String> param = config.getInitParameterNames();
+        while (param.hasMoreElements()){
+            out.println("Value is: " + param.nextElement());
+        }
+        out.println("addjsp: " + config.getInitParameter("class"));
+//        out.println(application.getInitParameter("name"));
         int num1 =Integer.parseInt( request.getParameter("num1"));
         int num2 = Integer.parseInt(request.getParameter("num2"));
         int result = num1+ num2;
@@ -31,6 +38,7 @@
 
 
     %>
+
     <%="<b>the sum is : " + result + "</b>"%>
 </body>
 </html>

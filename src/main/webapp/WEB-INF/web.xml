@@ -23,21 +23,31 @@
 <!--    <url-pattern>/auth</url-pattern>-->
 <!--</servlet-mapping>-->
 
-<!--<servlet>-->
-<!--    <servlet-name>square-servlet</servlet-name>-->
-<!--    <servlet-class>com.fclass.servletjsp.SqServlet</servlet-class>-->
-<!--</servlet>-->
-<!--<servlet-mapping>-->
-<!--    <servlet-name>square-servlet</servlet-name>-->
-<!--    <url-pattern>/square</url-pattern>-->
-<!--</servlet-mapping>-->
-
 <servlet>
-    <servlet-name>add-jsp</servlet-name>
-    <jsp-file>/Add.jsp</jsp-file>
+    <servlet-name>square-servlet</servlet-name>
+    <servlet-class>com.fclass.servletjsp.SqServlet</servlet-class>
+
+    <init-param>
+        <param-name>class</param-name>
+        <param-value>software</param-value>
+    </init-param>
 </servlet>
 <servlet-mapping>
-    <servlet-name>add-jsp</servlet-name>
+    <servlet-name>square-servlet</servlet-name>
+    <url-pattern>/square</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>addjsppage</servlet-name>
+    <jsp-file>/Add.jsp</jsp-file>
+    <init-param>
+        <param-name>class</param-name>
+        <param-value>software</param-value>
+    </init-param>
+
+</servlet>
+<servlet-mapping>
+    <servlet-name>addjsppage</servlet-name>
     <url-pattern>/addjsp</url-pattern>
 </servlet-mapping>
 
