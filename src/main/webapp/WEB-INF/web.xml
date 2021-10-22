@@ -52,7 +52,16 @@
 </servlet-mapping>
 
 
-<context-param>
+<servlet>
+    <servlet-name>errorjsppage</servlet-name>
+    <jsp-file>/Error.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>errorjsppage</servlet-name>
+    <url-pattern>/errorjsp</url-pattern>
+</servlet-mapping>
+
+    <context-param>
     <param-name>name</param-name>
     <param-value>raffayay</param-value>
 </context-param>

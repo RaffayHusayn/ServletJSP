@@ -11,22 +11,19 @@
   Time: 10:33 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" errorPage="errorjsp" %>
 <html>
 <head>
     <title>Add Jsp</title>
 </head>
-<body bgcolor="#778899">
+<body >
 
     <%!
         String outsideClass = "outside Class";
     %>
 
     <%
-       Enumeration<String> param = config.getInitParameterNames();
-        while (param.hasMoreElements()){
-            out.println("Value is: " + param.nextElement());
-        }
+//        int i = 6/0;
         out.println("addjsp: " + config.getInitParameter("class"));
 //        out.println(application.getInitParameter("name"));
         int num1 =Integer.parseInt( request.getParameter("num1"));
