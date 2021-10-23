@@ -12,6 +12,8 @@
     <title>JSTL</title>
 </head>
 <body>
-    <c:out value="Hello"></c:out>
+    <c:forEach items="${student_List_Param}" var="s">
+        ${s}
+    </c:forEach>
 </body>
 </html>
