@@ -62,6 +62,15 @@
 </servlet-mapping>
 
 <servlet>
+    <servlet-name>jstljsppage</servlet-name>
+    <jsp-file>/Jstl.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>jstljsppage</servlet-name>
+    <url-pattern>/jstljsp</url-pattern>
+</servlet-mapping>
+
+<servlet>
     <servlet-name>studentsjsppage</servlet-name>
     <jsp-file>/Students.jsp</jsp-file>
 </servlet>
