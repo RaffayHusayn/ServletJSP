@@ -23,6 +23,10 @@
         <c:out value = " : "/>
         <c:out value="${software.id}"/>
         <c:out value="(length of name = ${fn:length(software.name)} )" />
+        <c:set var="vowel" value="A"/>
+        <c:if test="${fn:startsWith(software.name,vowel )}">
+            <c:out  value="|||This name Starts with A|||"/>
+        </c:if>
         <br>
 
     </c:forEach>
