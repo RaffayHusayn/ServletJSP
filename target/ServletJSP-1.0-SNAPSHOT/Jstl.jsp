@@ -13,7 +13,7 @@
 </head>
 <body>
     <c:forEach items="${student_List_Param}" var="s">
-        ${s}
+        ${s}<br> <!-- this is just printing a list of Student objects sent from StudentServlet.java-->
     </c:forEach>
 </body>
 </html>

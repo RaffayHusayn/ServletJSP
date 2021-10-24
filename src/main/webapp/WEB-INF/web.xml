@@ -71,6 +71,15 @@
 </servlet-mapping>
 
 <servlet>
+    <servlet-name>jstlsqljsppage</servlet-name>
+    <jsp-file>/Jstlsql.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>jstlsqljsppage</servlet-name>
+    <url-pattern>/jstlsqljsp</url-pattern>
+</servlet-mapping>
+
+<servlet>
     <servlet-name>studentsjsppage</servlet-name>
     <jsp-file>/Students.jsp</jsp-file>
 </servlet>

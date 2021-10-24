@@ -8,6 +8,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,8 +23,10 @@ public class StudentServlet extends HttpServlet {
         studentsList.add(s2);
         studentsList.add(s3);
 
+        PrintWriter out= res.getWriter();
         req.setAttribute("student_List_Param", studentsList);
         RequestDispatcher rd = req.getRequestDispatcher("jstljsp");
         rd.forward(req,res);
+
     }
 }
