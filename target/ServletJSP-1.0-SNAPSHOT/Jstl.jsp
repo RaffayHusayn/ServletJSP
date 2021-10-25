@@ -12,7 +12,10 @@
     <title>JSTL</title>
 </head>
 <body>
-    <c:forEach items="${student_List_Param}" var="s">
+<h2>
+    jstljsp is running, it just needs a list of student objects to work properly which is sent by StudentServlet
+</h2>
+<c:forEach items="${student_List_Param}" var="s">
         ${s}<br> <!-- this is just printing a list of Student objects sent from StudentServlet.java-->
     </c:forEach>
 </body>

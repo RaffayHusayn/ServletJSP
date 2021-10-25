@@ -37,6 +37,9 @@
     <url-pattern>/square</url-pattern>
 </servlet-mapping>
 
+    <!-- /////////////////     (JSP pages)     ////////////////// -->
+
+
 <servlet>
     <servlet-name>addjsppage</servlet-name>
     <jsp-file>/Add.jsp</jsp-file>
@@ -87,8 +90,23 @@
     <servlet-name>studentsjsppage</servlet-name>
     <url-pattern>/studentsjsp</url-pattern>
 </servlet-mapping>
-    <context-param>
-    <param-name>name</param-name>
-    <param-value>raffayay</param-value>
-</context-param>
+<!--    <context-param>-->
+<!--    <param-name>name</param-name>-->
+<!--    <param-value>raffayay</param-value>-->
+<!--</context-param>-->
+
+
+<!-- /////////////////     (FILTERS)     ////////////////// -->
+
+
+<filter>
+    <filter-name>passwordfilter</filter-name>
+    <filter-class>com.fclass.servletjsp.PasswordFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>passwordfilter</filter-name>
+    <url-pattern>/addjsp</url-pattern>
+    <url-pattern>/studentsjsp</url-pattern>
+    <url-pattern>/jstljsp</url-pattern>
+</filter-mapping>
 </web-app>

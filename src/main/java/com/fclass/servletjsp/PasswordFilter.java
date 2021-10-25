@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 //@WebFilter(filterName = "PasswordFilter")
-@WebFilter("/jstlsqljsp")
+@WebFilter("/jstlsqljsp" )
 public class PasswordFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
     }
