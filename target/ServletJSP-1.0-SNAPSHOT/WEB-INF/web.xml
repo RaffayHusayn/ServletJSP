@@ -110,6 +110,14 @@
     <url-pattern>/loginjsp</url-pattern>
 </servlet-mapping>
 
+<servlet>
+    <servlet-name>welcomejsppage</servlet-name>
+    <jsp-file>/Welcome.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>welcomejsppage</servlet-name>
+    <url-pattern>/welcomejsp</url-pattern>
+</servlet-mapping>
     <!--    <context-param>-->
 <!--    <param-name>name</param-name>-->
 <!--    <param-value>raffayay</param-value>-->
