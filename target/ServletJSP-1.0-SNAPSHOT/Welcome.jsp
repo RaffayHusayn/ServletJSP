@@ -11,6 +11,15 @@
     <title>Welcome</title>
 </head>
 <body background=" red">
-        <h1>Welcome</h1>
+    <%
+        String sessionUsername = (String)session.getAttribute("username");
+        if(sessionUsername== null){
+            response.sendRedirect("Login.jsp");
+        }
+    %>
+    <h1> Welcome : ${username}</h1>
+    <form action="logout">
+        <input type="submit" value = "log out" />
+    </form>
 </body>
 </html>

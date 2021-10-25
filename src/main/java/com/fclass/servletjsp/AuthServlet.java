@@ -34,12 +34,10 @@ public class AuthServlet extends HttpServlet {
 //            req.setAttribute("num2", num2);
 //            rd.include(req, res);
 //
-            out.println("<b>auth servlet</b>");
 
            HttpSession session = req.getSession();
            session.setAttribute("username", inputUsername);
-            RequestDispatcher rdLogin = req.getRequestDispatcher("welcomejsp");
-            rdLogin.forward(req,res);
+           res.sendRedirect("welcomejsp");
         }else{
            RequestDispatcher rdNotLogin = req.getRequestDispatcher("loginjsp");
            out.println("<h3 style=\"color:red;\">Try Again</h3>");
