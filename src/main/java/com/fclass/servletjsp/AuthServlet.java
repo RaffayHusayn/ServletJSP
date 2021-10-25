@@ -15,30 +15,34 @@ public class AuthServlet extends HttpServlet {
 
     public void service(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 
-       String inputUsername = req.getParameter("username");
+        res.setContentType("text/html");
+        String inputUsername = req.getParameter("username");
        String inputPassword = req.getParameter("password");
-       int num1 = Integer.parseInt(req.getParameter("num1"));
-       int num2 = Integer.parseInt(req.getParameter("num2"));
+//       int num1 = Integer.parseInt(req.getParameter("num1"));
+//       int num2 = Integer.parseInt(req.getParameter("num2"));
        String username = "raffayhusayn";
        String password = "1234";
        PrintWriter out = res.getWriter();
 
        if(inputUsername.equals(username) && inputPassword.equals(password)){
-           HttpSession session = req.getSession();
-           session.setAttribute("num1" , num1);
-           session.setAttribute("num2", num2);
-//           res.sendRedirect("add");
-            RequestDispatcher rd = req.getRequestDispatcher("/Add.jsp");
-            req.setAttribute("num1" , num1);
-            req.setAttribute("num2", num2);
-            rd.include(req, res);
-            res.setContentType("text/html");
-
+//           HttpSession session = req.getSession();
+//           session.setAttribute("num1" , num1);
+//           session.setAttribute("num2", num2);
+////           res.sendRedirect("add");
+//            RequestDispatcher rd = req.getRequestDispatcher("/Add.jsp");
+//            req.setAttribute("num1" , num1);
+//            req.setAttribute("num2", num2);
+//            rd.include(req, res);
+//
             out.println("<b>auth servlet</b>");
 
+           HttpSession session = req.getSession();
+           session.setAttribute("username", inputUsername);
+
         }else{
-           out.println("incorrect username or password, try again");
-           res.sendRedirect("index.html");
+           RequestDispatcher rd = req.getRequestDispatcher("loginjsp");
+           out.println("<h3 style=\"color:red;\">Try Again</h3>");
+           rd.include(req, res);
        }
     }
 

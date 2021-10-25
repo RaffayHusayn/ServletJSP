@@ -99,7 +99,18 @@
     <servlet-name>studentsjsppage</servlet-name>
     <url-pattern>/studentsjsp</url-pattern>
 </servlet-mapping>
-<!--    <context-param>-->
+
+
+<servlet>
+    <servlet-name>loginjsppage</servlet-name>
+    <jsp-file>/Login.jsp</jsp-file>
+</servlet>
+<servlet-mapping>
+    <servlet-name>loginjsppage</servlet-name>
+    <url-pattern>/loginjsp</url-pattern>
+</servlet-mapping>
+
+    <!--    <context-param>-->
 <!--    <param-name>name</param-name>-->
 <!--    <param-value>raffayay</param-value>-->
 <!--</context-param>-->
