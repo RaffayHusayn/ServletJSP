@@ -12,7 +12,8 @@
 </head>
 <body background=" red">
     <%
-        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
+        response.setHeader("Cache-Control", "no-cache, no-store, must-revalidate"); //http 1.1
+
         String sessionUsername = (String)session.getAttribute("username");
         if(sessionUsername== null){
             response.sendRedirect("Login.jsp");
